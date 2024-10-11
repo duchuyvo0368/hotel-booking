@@ -1,9 +1,5 @@
 # Hotel Booking Website
 
-![Hotel Image 1](https://raw.githubusercontent.com/duchuyvo0368/hotel-booking/refs/heads/master/images/1.png)  
-![Hotel Image 2](https://raw.githubusercontent.com/duchuyvo0368/hotel-booking/refs/heads/master/images/2.png)  
-![Hotel Image 3](https://raw.githubusercontent.com/duchuyvo0368/hotel-booking/refs/heads/master/images/3.png)
-
 ## Description
 
 This project is a **Hotel Booking Website** developed using **Node.js** for the backend and **React.js** for the frontend. It allows users to search for and book hotel rooms, and provides secure user authentication via **JWT (JSON Web Token)**. The backend is powered by **Express.js** and **MySQL** to manage hotel data, user information, and booking records. Additionally, it includes an integrated online payment system to process bookings securely.
