@@ -25,7 +25,7 @@ bin-release/
 audit.json
 
 # environment variables
-.env
+
 .env.local
 
 # uploads folder
