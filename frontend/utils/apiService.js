@@ -50,7 +50,7 @@ ApiService.interceptors.response.use(
       removeSessionAndLogoutUser();
     }
 
-    // eslint-disable-next-line no-underscore-dangle
+   
     if (error.response.status === 401 && !originalRequest._retry) {
       // if authorized to logout user and redirect login page
       removeSessionAndLogoutUser();
