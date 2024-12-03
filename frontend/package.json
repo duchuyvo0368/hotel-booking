@@ -9,9 +9,6 @@
     "start": "next start -p 3000",
     "lint": "next lint"
   },
-  "engines": {
-    "node": "17"
-  },
   "dependencies": {
     "@ant-design/icons": "^4.8.0",
     "@reduxjs/toolkit": "^1.9.1",
