@@ -23,7 +23,6 @@ bin-release/
 # app logs
 /logs
 audit.json
-docker-compose.yaml
 # environment variables
 .env
 .env.local
