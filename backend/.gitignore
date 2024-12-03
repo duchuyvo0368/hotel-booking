@@ -26,7 +26,6 @@ audit.json
 
 # environment variables
 
-.env.local
 
 # uploads folder
 /public/uploads
