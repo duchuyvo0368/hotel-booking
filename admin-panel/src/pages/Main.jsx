@@ -1,11 +1,4 @@
-/**
- * @name Hotel Room Booking System
- * @author Md. Samiur Rahman (Mukul)
- * @description Hotel Room Booking and Management System Software ~ Developed By Md. Samiur Rahman (Mukul)
- * @copyright ©2023 ― Md. Samiur Rahman (Mukul). All rights reserved.
- * @version v0.0.1
- *
- */
+ 
 
 import {
   DashboardOutlined, FileProtectOutlined, FullscreenExitOutlined, FullscreenOutlined, HomeOutlined, LogoutOutlined, TeamOutlined, UserOutlined
@@ -233,7 +226,7 @@ function Main() {
         </Content>
 
         <Footer className='text-center font-text-font font-medium '>
-          ©2023 Beach Resort — Developed By
+          ©2023 
           {' '}
           <a
             className='text-color-primary hover:text-color-secondary'
@@ -241,7 +234,7 @@ function Main() {
             target='_blank'
             rel='noreferrer'
           >
-            Md. Samiur Rahman (Mukul)
+              
           </a>
         </Footer>
       </Layout>

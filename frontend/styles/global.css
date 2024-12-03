@@ -1,11 +1,4 @@
-/**
- * @name Hotel Room Booking System
- * @author Md. Samiur Rahman (Mukul)
- * @description Hotel Room Booking and Management System Software ~ Developed By Md. Samiur Rahman (Mukul)
- * @copyright ©2023 ― Md. Samiur Rahman (Mukul). All rights reserved.
- * @version v0.0.1
- *
- */
+ 
 
 * {
   margin: 0;
@@ -18,7 +11,6 @@
   --offWhite: #f7f7f7;
   --mainBlack: #222;
   --mainGrey: #ececec;
-  --darkGrey: #cfcfcf;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 3px;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
@@ -183,7 +175,7 @@ h6 {
 .defaultHero,
 .roomsHero {
   min-height: calc(100vh - 66px);
-  background: url('/images/jpeg/defaultBcg2.jpg') center/cover no-repeat;
+  background: url('/images/jpeg/banner-2.png') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;

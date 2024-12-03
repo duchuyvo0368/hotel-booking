@@ -1,0 +1,7 @@
+# Thêm các thư mục và tệp cần loại bỏ khỏi git tracking
+node_modules/
+npm-debug.log
+.git/
+.DS_Store
+.env
+.package-look.json

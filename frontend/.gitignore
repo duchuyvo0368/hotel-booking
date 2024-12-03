@@ -16,7 +16,7 @@
 # misc
 .DS_Store
 *.pem
-
+.docker-compose.yaml
 # debug
 npm-debug.log*
 yarn-debug.log*

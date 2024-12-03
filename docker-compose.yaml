@@ -1,0 +1,96 @@
+services:
+  frontend:
+    build:
+      dockerfile: Dockerfile
+      context: ./frontend
+    # networks:
+    #   - my-network
+    container_name: frontend
+    # volumes:
+    #   - .:/frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT = 3000
+      - API_BASE_URL = http://localhost:5000
+    networks:
+      - network
+    restart: always
+
+  admin-panel:
+    build:
+      dockerfile: Dockerfile
+      context: ./admin-panel
+    # networks:
+    #   - my-network
+    container_name: admin-panel
+    # volumes:
+    #   - .:/admin-panel
+    ports:
+      - "3033:3033"
+    environment:
+      - PORT=3033
+      - REACT_APP_API_BASE_URL=http://localhost:5000
+    networks:
+      - network
+    restart: always
+
+  backend:
+    build:
+      dockerfile: Dockerfile
+      context: ./backend
+    container_name: backend
+    ports:
+      - "5000:5000"
+    environment:
+       - APP_NAME=MyApp
+       - APP_PORT=5000
+       - APP_NODE_ENV=production
+       - APP_BASE_URL=http://localhost:5000
+       - APP_SERVICE_URL=http://localhost:5000/api
+       - APP_LOG_LEVEL=debug
+       - MONGO_URI=mongodb://mongo:27017/hotelbooking
+       - JWT_SECRET_KEY=mysecretkey
+       - JWT_ACCESS_TOKEN_EXPIRES=3600
+       - JWT_REFRESH_TOKEN_EXPIRES=86400
+       - JWT_TOKEN_COOKIE_EXPIRES=7d
+       - SEND_SENDER_MAIL=test@example.com
+       - SEND_GRID_API_KEY=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
+    networks:
+      - network
+    restart: always
+
+  mongo:
+    image: mongo:latest
+    # networks:
+    #   - my-network
+    container_name: mongo
+    environment:
+      - MONGO_INITDB_DATABASE=hotelbooking
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - network
+    restart: always
+
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+    - 8081:8081
+    environment:
+        ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+        ME_CONFIG_MONGODB_ADMINPASSWORD: 123456
+        ME_CONFIG_MONGODB_URL: mongodb://mongo:27017/
+        ME_CONFIG_BASICAUTH: false
+    networks:
+      - network
+volumes:
+  mongo-data:
+networks:
+  network:
+    driver: bridge
+
